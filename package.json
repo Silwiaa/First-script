@@ -14,10 +14,10 @@
     "build:clean": "npm install --save-dev -r -f rimraf",
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
-    "build-dev:sass": "node-sass --output-style expanded --source-map true -o /css sass",
+    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all build -p watch:*",
     "watch:sassprefixer": "node_modules/.bin/onchange -d 100 sass/style.scss -- node-sass --output-style expanded --source-map true -o css sass && autoprefixer-cli -o css/style.prefixed.css css/style.css",
-    "watch:browsersync": "n pm install --save-dev browser-sync"
+    "watch:browsersync": "npm install --save-dev browser-sync"
   },
   "repository": {
     "type": "git",
